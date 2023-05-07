@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Statistics from './Statistics';
 import FeedBackOption from './FeedBackOption';
 import css from './Section.module.css';
@@ -25,3 +26,10 @@ const Section = ({
 };
 
 export default Section;
+
+Section.propTypes = {
+  state: PropTypes.object,
+  onClick: PropTypes.func,
+  countTotalFeedback: PropTypes.func,
+  countPositiveFeedback: PropTypes.func
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Statistics = ({ state, countTotalFeedback, countPositiveFeedback }) => {
   return (
@@ -20,3 +21,9 @@ const Statistics = ({ state, countTotalFeedback, countPositiveFeedback }) => {
 };
 
 export default Statistics;
+
+Statistics.propTypes = {
+  state: PropTypes.object,
+  countTotalFeedback: PropTypes.func,
+  countPositiveFeedback: PropTypes.func
+}
