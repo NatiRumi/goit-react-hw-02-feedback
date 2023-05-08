@@ -10,7 +10,6 @@ class App extends Component {
   };
 
   handleClickBtn = ({ target }) => {
-    // console.log(target);
     this.setState(prev => ({
       [target.name]: prev[target.name] + 1,
     }));
@@ -34,14 +33,13 @@ class App extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Section
+        <Section 
+          title='Please leave feedback'
           state={this.state}
           onClick={this.handleClickBtn}
           countTotalFeedback={this.countTotalFeedback}
           countPositiveFeedback={this.countPositiveFeedbackPercentage}
         />
-      </React.Fragment>
     );
   }
 }
